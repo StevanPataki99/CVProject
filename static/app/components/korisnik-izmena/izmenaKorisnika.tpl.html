@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-12">
+        <form ng-submit="pctrl.sacuvaj()" name="korisnikForma">
+            <div class="form-group">
+                <label for="ime">Ime:</label>
+                <input type="text" name="ime" id="ime" class="form-control" ng-model="pctrl.noviKorisnik.ime" required>
+            </div>
+            <div class="form-group">
+                <label for="prezime">Prezime:</label>
+                <input type="text" name="prezime" id="prezime" class="form-control" ng-model="pctrl.noviKorisnik.prezime" required>
+            </div>
+            <div class="form-group">
+                <label for="korisnicko_ime">Korinsicko ime:</label>
+                <input type="text" name="korisnicko_ime" id="korisnicko_ime" class="form-control" ng-model="pctrl.noviKorisnik.korisnicko_ime" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Izmeni korisnika" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+</div>

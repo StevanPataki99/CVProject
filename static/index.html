@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Servisi</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Uvezivanje AngularJS biblioteke. -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+
+    <!-- Uvezivanje skripte glavne aplikacije. -->
+    <script src="app/app.js"></script>
+    <!-- Uvezivanje skripte kontrolera ProizvodCtrl. -->
+    <script src="app/components/korisnik/korisniciCtrl.js"></script>
+    <script src="app/components/korisnik-prikaz/korisnikPrikazCtrl.js"></script>
+    <script src="app/components/dodajKorisnika/dodajKorisnikaCtrl.js"></script>
+    <script src="app/components/korisnik-izmena/izmenaKorisnikaCtrl.js"></script>
+
+</head>
+
+<body ng-app="app">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" ui-sref="home" ui-sref-active="active">Pocetna</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item" ui-sref-active="active">
+
+                    <a class="nav-link" ui-sref="dogadjaj">Dogadjaji</a>
+                </li>
+                <li class="nav-item" ui-sref-active="active">
+                    <a class="nav-link" ui-sref="dodavanjeKorisnika">Dodavanje korisnika</a>
+                </li>
+                <li class="nav-item" ui-sref-active="active">
+                    <a class="nav-link" ui-sref="dodavanjeTipova">Dodavanje tipova dogadjaja</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+
+        <ui-view></ui-view>
+    </div>
+</body>
+
+</html>

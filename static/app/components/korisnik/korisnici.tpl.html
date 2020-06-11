@@ -1,0 +1,55 @@
+<div class="row">
+   
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Redni broj</th>
+                    <th>Ime</th>
+                    <th>Korisnicko ime</th>
+                    <th>Prezime</th>
+                    <th>Obrisi</th>
+                    <th>Izmeni</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                <tr ng-repeat="p in pctrl.korisnici">
+                    
+                    <td>{{$index+1}}</td>
+                   
+                    <td><a ui-sref="korisnikPrikaz({id:p['id']})">{{p["ime"]}}</a></td>
+                    <td>{{p["korisnicko_ime"]}}</td>
+                    <td>{{p["prezime"]}}</td>
+                    
+                    <td><button class="btn btn-danger" ng-click="pctrl.ukloniKorisnika(p['id'])">Ukloni</button></td>
+                    <td> <a ui-sref="izmenaKorisnika({id: p['id']})">Izmeni</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <!--<table class="table">
+            <thead>
+                <tr>
+                    <th>Redni broj</th>
+                    <th>Naziv</th>
+                    <th>Skraćenica</th>
+                    <th>Obrisi</th>
+                    <th>Izmeni</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr ng-repeat="p in pctrl.tipovi">
+                   
+                    <td>{{$index+1}}.</td>
+                    
+                    <td><a ui-sref="tipovi({id: p['id']})">{{p["naziv"]}}</a></td>
+                    <td>{{p["skraćenica"]}}</td>
+                    
+                    <td><button class="btn btn-danger" ng-click="pctrl.ukloniTipove(p['id'])">Ukloni</button></td>
+                    <td> <a ui-sref="izmenaTipova({id: p['id']})">Izmeni</a></td>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+</div>
