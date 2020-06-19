@@ -1,0 +1,6 @@
+[{
+    "columns": ["brand", "model", "price", "made_in", "dealer", "imei_code", "stores"],
+    "key": "imei_code",
+    "linked_files": ["stores"],
+    "database_type": "serial"
+}]
